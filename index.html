@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Инженерные услуги при строительстве и ремонте — sherma.consult</title>
+<meta name="description" content="Инженерные услуги при строительстве и ремонте: приёмка квартир, консультации, сопровождение. Экономия бюджета проекта до 20%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EE;--surface:#FFFFFF;--ink:#14161C;--ink2:#5A5F6B;--hair:rgba(20,22,28,.1);
+  --accent:#3D4EF5;--accent-d:#2F3DD0;--tint:#E9EBFF;--warm:#FF9B6A;--warm-t:#FFE9DD;
+  --soft:0 1px 3px rgba(20,22,28,.05);--lift:0 16px 40px rgba(20,22,28,.07);
+  --eo:cubic-bezier(.16,1,.3,1);
+  --f:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;--fd:"Unbounded","Onest",sans-serif;
+  --wrap:1180px;--gut:clamp(16px,4vw,40px);--r:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+h1,h2,h3{margin:0;font-weight:500}
+h1,h2,.disp{font-family:var(--fd);letter-spacing:-.02em;line-height:1.15}
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:50}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 26px;border-radius:16px;font:500 1rem/1 var(--f);text-decoration:none;border:0;cursor:pointer;transition:transform 150ms var(--eo),background 150ms var(--eo)}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(0)}
+.btn-a{background:var(--accent);color:#fff}.btn-a:hover{background:var(--accent-d)}
+.btn-g{background:var(--surface);color:var(--ink);border:1px solid var(--hair)}
+.btn-w{background:#fff;color:var(--ink)}
+.btn-o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-sm{height:44px;padding:0 18px;font-size:.875rem;border-radius:12px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid transparent;transition:border-color 200ms}
+.top.stuck{border-bottom-color:var(--hair)}
+.top .wrap{display:flex;align-items:center;gap:26px;height:72px}
+.mark{font:500 1rem/1 var(--fd);letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark i{width:28px;height:28px;border-radius:9px;background:var(--accent);position:relative;display:block}
+.mark i::before{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--warm)}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a{text-decoration:none;color:var(--ink2);transition:color 150ms}
+.nav a:hover{color:var(--ink)}
+.tel{font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(20px,4vw,48px) 0 clamp(48px,7vw,88px)}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;position:relative}
+.aura{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;z-index:0;pointer-events:none}
+.aura.a1{width:420px;height:420px;background:var(--accent);right:4%;top:-6%;animation:drift1 14s ease-in-out infinite alternate}
+.aura.a2{width:360px;height:360px;background:var(--warm);right:26%;top:40%;animation:drift2 17s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(-60px,50px) scale(1.12)}}
+@keyframes drift2{to{transform:translate(70px,-40px) scale(.9)}}
+.hero .wrap>:not(.aura){position:relative;z-index:1}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--hair);border-radius:999px;padding:8px 14px 8px 10px;font-size:.875rem;font-weight:500;margin-bottom:22px}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:#22B573;box-shadow:0 0 0 4px rgba(34,181,115,.18)}
+h1{font-size:clamp(1.9rem,3.7vw,3.1rem);margin:0 0 20px}
+h1 .w{display:inline-block;opacity:0;transform:translateY(.5em);animation:wup 300ms var(--eo) forwards;animation-delay:calc(var(--i)*45ms)}
+@keyframes wup{to{opacity:1;transform:none}}
+.sub{font-size:1.25rem;color:var(--ink2);margin:0 0 28px;line-height:1.45}
+.sub b{color:var(--ink);font-weight:600;background:linear-gradient(transparent 62%,var(--warm) 62%);padding:0 2px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.rise{opacity:0;transform:translateY(12px);animation:wup 300ms var(--eo) forwards;animation-delay:var(--d,300ms)}
+
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--soft);position:relative;overflow:hidden}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%);opacity:0;transition:opacity 200ms;pointer-events:none}
+.spot:hover::after{opacity:1}
+.modelcard{grid-column:1/-1;padding:10px 10px 12px;box-shadow:var(--lift)}
+#model{width:100%;aspect-ratio:1/.62;display:block;cursor:grab;touch-action:pan-y;border-radius:16px;background:linear-gradient(160deg,#EEF0FF,#F7EEE9)}
+#model:active{cursor:grabbing}
+.balance{margin:12px 8px 10px;font-weight:500;font-size:.875rem;color:var(--ink2)}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;position:relative;z-index:1}
+.seg button{font:inherit;text-align:left;color:var(--ink);background:var(--bg);border:1px solid transparent;border-radius:12px;padding:10px 12px 11px;cursor:pointer;transition:background 150ms var(--eo)}
+.seg button:hover{background:var(--tint)}
+.seg button[aria-pressed=true]{background:var(--tint);border-color:var(--accent)}
+.seg strong{display:block;font-weight:600;font-size:.875rem;line-height:1.25}
+.seg em{display:block;font-style:normal;font-size:.75rem;color:var(--ink2);margin-top:2px;line-height:1.35}
+.stat{padding:18px 20px}
+.stat b{display:block;font:500 1.75rem/1.15 var(--fd);letter-spacing:-.02em}
+.stat>span{color:var(--ink2);font-size:.875rem}
+.stat.blue{background:var(--accent);color:#fff;border-color:transparent}.stat.blue>span{color:#D5D9FF}
+
+/* marquee */
+.marq{overflow:hidden;border-block:1px solid var(--hair);padding:16px 0;background:var(--surface)}
+.marq-in{display:flex;align-items:center;gap:28px;width:max-content;animation:marq 40s linear infinite;font:500 1.125rem/1 var(--fd);white-space:nowrap;letter-spacing:-.02em}
+.marq:hover .marq-in{animation-play-state:paused}
+.marq-in i{width:10px;height:10px;border-radius:50%;background:var(--warm);flex:none}
+.marq-in i:nth-of-type(even){background:var(--accent)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+.sec{padding:clamp(56px,8vw,104px) 0}
+h2{font-size:clamp(1.5rem,2.8vw,2.25rem);margin:0 0 28px;max-width:18em}
+[data-rv]{opacity:0;transform:translateY(24px);transition:opacity 300ms var(--eo),transform 300ms var(--eo);transition-delay:calc(var(--i,0)*70ms)}
+[data-rv].in{opacity:1;transform:none}
+
+/* prices bento */
+.pgrid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px}
+.pc{padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;min-height:260px}
+.pc h3{font-size:1.25rem;font-weight:600;margin-bottom:6px}
+.pc p{margin:0;color:var(--ink2)}
+.pc .price{margin-top:auto;padding-top:24px;font:500 clamp(1.75rem,3vw,2.5rem)/1.15 var(--fd);letter-spacing:-.02em;color:var(--ink)}
+.pc .price small{display:block;font:400 .875rem/1.4 var(--f);letter-spacing:0;color:var(--ink2);margin-top:6px}
+.pc.blue{background:var(--accent);color:#fff;border-color:transparent}
+.pc.blue p{color:#D5D9FF}.pc.blue .price{color:#fff}
+.pc.blue::before{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:var(--warm);filter:blur(50px);opacity:.75}
+.pc.blue>*{position:relative}
+.pc.warm{background:var(--warm-t);border-color:transparent}
+.pc.warm .btn{margin-top:auto;align-self:flex-start}
+
+/* accordion */
+.accs{background:var(--surface);border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--soft);overflow:hidden}
+.acc+.acc{border-top:1px solid var(--hair)}
+.acc-h{width:100%;display:flex;align-items:center;gap:16px;text-align:left;background:none;border:0;color:var(--ink);font:500 1.125rem/1.3 var(--f);padding:22px clamp(18px,3vw,28px);cursor:pointer;transition:background 150ms var(--eo)}
+.acc-h:hover{background:color-mix(in srgb,var(--tint) 50%,transparent)}
+.acc-h .pl{margin-left:auto;flex:none;width:36px;height:36px;border-radius:50%;background:var(--tint);position:relative;transition:transform 200ms var(--eo),background 200ms}
+.acc-h .pl::before,.acc-h .pl::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;border-radius:2px;background:var(--accent);transform:translate(-50%,-50%);transition:transform 200ms var(--eo),background 200ms}
+.acc-h .pl::after{transform:translate(-50%,-50%) rotate(90deg)}
+.acc.open .pl{background:var(--accent);transform:rotate(180deg)}
+.acc.open .pl::before,.acc.open .pl::after{background:#fff}
+.acc.open .pl::after{transform:translate(-50%,-50%) rotate(0)}
+.acc-p{display:none;padding:0 clamp(18px,3vw,28px) 26px}
+.acc.open .acc-p{display:block;animation:accin 200ms var(--eo)}
+@keyframes accin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.acc-p p{color:var(--ink2);max-width:44em;margin:0 0 14px}
+.acc-p>*:last-child{margin-bottom:0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.duo>div{background:var(--bg);border-radius:18px;padding:22px}
+.duo>div:first-child{background:var(--tint)}
+.duo h3{font-size:1.125rem;font-weight:600;margin-bottom:2px}
+.duo .t{font-size:.875rem;color:var(--accent-d);font-weight:500;margin:0 0 14px}
+.lst{margin:0;padding:0;list-style:none;display:grid;gap:10px;color:var(--ink2);max-width:46em}
+.lst li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.lst li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:.6em}
+.lst b{color:var(--ink);font-weight:600}
+ol.num{margin:0;padding-left:20px;color:var(--ink2);max-width:44em;display:grid;gap:8px}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.who li{background:var(--bg);border:1px solid var(--hair);border-radius:12px;padding:10px 14px;font-weight:500}
+
+/* motto */
+.motto{padding:clamp(56px,9vw,120px) 0}
+.motto p{font:500 clamp(1.4rem,3vw,2.4rem)/1.25 var(--fd);letter-spacing:-.02em;margin:0;max-width:22em}
+.motto p+p{font:400 1.25rem/1.5 var(--f);letter-spacing:0;color:var(--ink2);margin-top:20px;max-width:30em}
+.motto p:first-child span{opacity:.15;transition:opacity 300ms var(--eo)}
+.motto p:first-child span.on{opacity:1}
+
+/* reviews */
+.rev{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;align-items:stretch}
+.rev>*{min-width:0}
+.chat{margin:0;border-radius:var(--r);overflow:hidden;background:#111;border:1px solid var(--hair);display:grid;align-content:center}
+.chat img{display:block;width:100%;height:auto}
+.chat blockquote{display:none;margin:0;padding:28px;color:#fff;font-size:1.25rem;line-height:1.45}
+.chat.noimg img{display:none}.chat.noimg blockquote{display:block}
+.ig{padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.ig p{font-size:1.25rem;font-weight:500;line-height:1.35;margin:0}
+.igbtn{display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--tint);border-radius:18px;padding:14px 18px 14px 14px;transition:transform 150ms var(--eo);position:relative;z-index:1}
+.igbtn:hover{transform:translateY(-2px)}
+.igbtn .ic{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--warm));color:#fff;display:grid;place-items:center;flex:none}
+.igbtn .ic svg{width:26px;height:26px}
+.igbtn .tx span{display:block;font-size:.875rem;color:var(--ink2);line-height:1.3}
+.igbtn .tx b{display:block;font-size:1.0625rem;font-weight:600}
+.igbtn .go{margin-left:auto;color:var(--accent);flex:none}
+
+/* final */
+.final{background:var(--ink);color:#fff;border-radius:32px;padding:clamp(36px,6vw,72px);position:relative;overflow:hidden;display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:end}
+.final .aura{opacity:.6}
+.final .a1{right:-80px;top:-140px;left:auto}.final .a2{right:22%;top:55%}
+.final>:not(.aura){position:relative;z-index:1}
+.final h2{font-size:clamp(1.6rem,3.4vw,2.75rem);margin:0;color:#fff}
+.final p{color:#C8CCD6;margin:0 0 22px}
+
+footer{padding:44px 0 48px;font-size:.875rem;color:var(--ink2)}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:32px 40px}
+footer h4{margin:0 0 10px;font-size:.875rem;font-weight:600;color:var(--ink)}
+footer a{display:block;text-decoration:none;margin-bottom:8px;transition:color 150ms}
+footer a:hover{color:var(--accent)}
+footer .ftel{font-size:1.125rem;font-weight:600;color:var(--ink)}
+.req{margin:14px 0 0;line-height:1.6}
+.pay{grid-column:1/-1;border-top:1px solid var(--hair);padding-top:22px}
+.pay img{display:block;max-width:100%;height:auto;max-height:40px}
+
+/* form */
+dialog.book{border:1px solid var(--hair);padding:0;border-radius:28px;background:var(--surface);color:var(--ink);width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;box-shadow:0 24px 64px rgba(20,22,28,.07)}
+dialog.book::backdrop{background:rgba(20,22,28,.55)}
+dialog.book[open]{animation:pop 200ms var(--eo)}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.book-in{padding:28px}
+.book-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px}
+.book h3{font:500 1.375rem/1.2 var(--fd);letter-spacing:-.02em}
+.book .x{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--bg);cursor:pointer;font-size:1.4rem;line-height:1;color:var(--ink)}
+.book .x:hover{background:var(--tint)}
+.lead-f{font-size:.875rem;color:var(--ink2);margin:0 0 18px}
+.fld{display:block;margin-bottom:14px}
+.fld>span:first-child{display:block;font-weight:500;font-size:.875rem;margin-bottom:6px}
+.fld input:not([type=checkbox]),.fld select{width:100%;font:400 1rem/1.35 var(--f);color:var(--ink);background:var(--surface);border:1px solid rgba(20,22,28,.22);border-radius:14px;padding:14px}
+.fld input:focus,.fld select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.fld .err{display:none;color:#C7362B;font-size:.875rem;margin-top:5px}
+.fld.bad .err{display:block}
+.fld.bad input,.fld.bad select{border-color:#C7362B}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc{border:0;padding:0;margin:0 0 16px}
+.svc legend{font-weight:500;font-size:.875rem;margin-bottom:8px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:block;padding:12px 16px;border-radius:14px;background:var(--bg);border:1px solid var(--hair);font-weight:500}
+.chips input:checked+span{background:var(--tint);border-color:var(--accent);color:var(--accent-d)}
+.chips input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.fld.agree{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:.875rem}
+.agree input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--accent)}
+.fld.agree>span:first-of-type{font-weight:400;margin:0}
+.agree .err{grid-column:2}
+.book .btn{width:100%}
+.fine{font-size:.875rem;color:var(--ink2);margin:12px 0 0}
+.done{text-align:center;padding:12px 0 4px}
+.done .ok{width:76px;height:76px;border-radius:50%;background:var(--tint);display:grid;place-items:center;margin:0 auto 14px}
+.done .ok svg{width:36px;height:36px}
+.done .ok path{stroke-dasharray:1;stroke-dashoffset:1;animation:tick 300ms 150ms var(--eo) forwards}
+@keyframes tick{to{stroke-dashoffset:0}}
+.done p{color:var(--ink2);margin:8px auto 20px;max-width:26em}
+.mbar{display:none}
+
+@media (max-width:980px){
+  .hero .wrap,.pgrid,.duo,.rev,.fgrid,.final{grid-template-columns:1fr}
+  .tel{display:none}
+  .pc{min-height:0}
+}
+@media (max-width:720px){
+  .nav,.top .btn{display:none}
+  .seg{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .book-in{padding:22px 18px}
+  .aura{filter:blur(50px);opacity:.4}
+  footer{padding-bottom:100px}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px;padding:8px;border-radius:20px;background:var(--surface);border:1px solid var(--hair);box-shadow:var(--lift)}
+  .mbar .btn{flex:1;height:48px;padding:0 10px;font-size:.9375rem;white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  h1 .w,.rise,[data-rv]{opacity:1;transform:none}.motto p:first-child span{opacity:1}
+  .done .ok path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><i aria-hidden="true"></i>sherma.consult</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#price">Стоимость</a><a href="#work">Как работаем</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="tel" href="tel:+375291826750">+375 (29) 182-67-50</a>
+    <button type="button" class="btn btn-a btn-sm" data-open-form>Заполнить форму</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="aura a1" aria-hidden="true"></div><div class="aura a2" aria-hidden="true"></div>
+    <div>
+      <span class="chip rise" style="--d:0ms">Первая консультация бесплатно</span>
+      <h1 id="h1">Инженерные услуги при строительстве и ремонте</h1>
+      <p class="sub rise" style="--d:350ms">Экономия бюджета проекта <b>до 20%</b></p>
+      <div class="cta rise" style="--d:450ms">
+        <button type="button" class="btn btn-a" data-open-form>Заполнить форму</button>
+        <a class="btn btn-g" href="#price">Стоимость услуг</a>
+      </div>
+    </div>
+    <div class="bento rise" style="--d:250ms">
+      <div class="card modelcard">
+        <canvas id="model" role="img" aria-label="Небольшая трёхмерная модель квартиры: план, стены и проверка по трём этапам работы. Модель можно вращать."></canvas>
+        <p class="balance">Я помогу вам создать баланс на этапах:</p>
+        <div class="seg" role="group" aria-label="Этапы">
+          <button type="button" data-stage="0" aria-pressed="true"><strong>Планирование</strong><em>проект, материал, подрядчик</em></button>
+          <button type="button" data-stage="1" aria-pressed="false"><strong>Реализация и контроль</strong><em>проведение работ</em></button>
+          <button type="button" data-stage="2" aria-pressed="false"><strong>Завершение</strong><em>приёмка работ</em></button>
+        </div>
+      </div>
+      <div class="card stat spot"><b>от <span data-count="100">100</span> BYN</b><span>приёмка квартир</span></div>
+      <div class="card stat blue"><b>до <span data-count="20">20</span>%</b><span>экономия бюджета проекта</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="marq-in" id="marq"></div></div>
+
+<section class="sec" id="price" aria-labelledby="h-price">
+  <div class="wrap">
+    <h2 id="h-price" data-rv>Стоимость моих услуг</h2>
+    <div class="pgrid">
+      <div class="card pc blue" data-rv style="--i:0">
+        <h3>Приёмка квартир</h3>
+        <p>Стоимость зависит от метража квартиры и от отделки: черновая или чистовая.</p>
+        <p class="price">от 100 BYN</p>
+      </div>
+      <div class="card pc spot" data-rv style="--i:1">
+        <h3>Консультация</h3>
+        <p>Индивидуальная разовая встреча.</p>
+        <p class="price">от 90 BYN<small>около 30 $ по курсу НБ РБ</small></p>
+      </div>
+      <div class="card pc warm" data-rv style="--i:2">
+        <h3>Первая консультация бесплатно</h3>
+        <p>Расскажите о вашем запросе: вопрос, проект, фотографии при наличии.</p>
+        <button type="button" class="btn btn-w btn-sm" data-open-form>Заполнить форму</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work" aria-labelledby="h-work" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="h-work" data-rv>Как мы работаем</h2>
+    <div class="accs" data-rv>
+      <div class="acc open">
+        <button type="button" class="acc-h" aria-expanded="true"><span>Какая форма взаимодействия</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p">
+          <p>Детальный разбор вашего случая с подготовкой рекомендаций и дальнейших действий по результату.</p>
+          <div class="duo">
+            <div>
+              <h3>Индивидуальное сопровождение</h3>
+              <p class="t">1 месяц, 4 встречи по часу</p>
+              <ul class="lst">
+                <li>Ваш запрос: вопрос, который хотите задать, проект, фотографии при наличии</li>
+                <li>Сбор информации по вашему запросу и анализ данных</li>
+                <li>Обратная связь в течение месяца: встреча раз в неделю для корректировки и контроля</li>
+                <li>Стратегия на 1–3 месяца работы</li>
+                <li>Поддержка и ответы на возникающие вопросы на всё время ведения</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Разовая консультация</h3>
+              <p class="t">встреча до 1 часа</p>
+              <ul class="lst">
+                <li>Ваш запрос: вопрос, который хотите задать, проект, фотографии при наличии</li>
+                <li>Сбор информации по вашему запросу и анализ данных</li>
+                <li>Встреча онлайн или офлайн</li>
+                <li>Стратегия на 1–3 месяца работы</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Как происходит взаимодействие</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p">
+          <ul class="lst">
+            <li><span><b>Онлайн.</b> Общаемся в любом удобном для вас мессенджере: Telegram, Viber, WhatsApp, Skype, по телефону или в Zoom.</span></li>
+            <li><span><b>С видео или без.</b> Решаете вы.</span></li>
+            <li><span><b>Офлайн.</b> Расходы на перемещение до объекта строительства оплачивает заказчик.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Кто может быть заказчиком</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p">
+          <p>Любой человек, который тратит своё время и деньги, является заказчиком.</p>
+          <ul class="who"><li>Застройщик</li><li>Проектировщик</li><li>Подрядчик (производитель работ)</li><li>Любое частное лицо</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="motto">
+  <div class="wrap">
+    <p data-words>Строительство и ремонт должны приносить вам хорошее настроение и положительные эмоции.</p>
+    <p>А это возможно, только если все процессы организованы, а значит понятны для вас.</p>
+  </div>
+</section>
+
+<section class="sec" id="reviews" aria-labelledby="h-rev" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="h-rev" data-rv>Отзывы</h2>
+    <div class="rev">
+      <figure class="chat" data-rv>
+        <img src="https://anutrisher.com/gallery_gen/750ff4c80caaeeef69af466be15000ce_fit.jpg" alt="Скриншот отзыва клиента из мессенджера: «Сергей. Все было по высшему разряду. Чётко. Быстро. Нет лишней воды. Мы с женой довольны. Будем тебя рекомендовать»" loading="lazy" onerror="this.closest('.chat').classList.add('noimg')">
+        <blockquote>Сергей. Все было по высшему разряду. Чётко. Быстро. Нет лишней воды. Мы с женой довольны. Будем тебя рекомендовать)</blockquote>
+      </figure>
+      <div class="card ig spot" data-rv style="--i:1">
+        <p>Здесь можно найти много полезной информации</p>
+        <a class="igbtn" href="https://www.instagram.com/sherma.consult" target="_blank" rel="noopener">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 16.5l4.2-4.2a1.5 1.5 0 0 1 2.1 0l2.4 2.4 1.6-1.6a1.5 1.5 0 0 1 2.1 0l2.6 2.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15.8" cy="9.6" r="1.3" fill="currentColor"/></svg></span>
+          <span class="tx"><span>Instagram</span><b>@sherma.consult</b></span>
+          <svg class="go" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 13L13 7M8 7h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="h-faq" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="h-faq" data-rv>Ответы на частые вопросы</h2>
+    <div class="accs" data-rv>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Какая процедура заказа услуги?</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p"><ul class="lst">
+          <li>Заказчик принимает решение о приобретении услуг.</li>
+          <li>Заполняет электронную форму на сайте: ФИО, электронная почта, контактный телефон и т.д.</li>
+          <li>Получает ссылку на оплату услуги и сроки её оказания (п. 4.5.1 Договора).</li>
+          <li>Оплачивает услугу способом, указанным в п. 4.6 Договора. Например: кликнув на ссылку, вы перейдёте на защищённую платёжную страницу процессинговой системы WebPay. Для оплаты нужно ввести данные карты и подтвердить платёж кнопкой «Оплатить».</li>
+          <li>Услуга оказывается дистанционно (онлайн), согласно информации на сайте.</li>
+        </ul></div>
+      </div>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Какой порядок расчёта за услугу?</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p">
+          <p>После принятия решения о приобретении услуг заказчик получает от исполнителя ссылку на оплату, в которой прописаны стоимость услуги и сроки её оказания.</p>
+          <p>Ссылка высылается на электронную почту или на контактный телефон в мессенджере (Telegram, Viber, WhatsApp), которые заказчик указал при заполнении формы на сайте.</p>
+          <p>Исполнитель предоставляет услуги на условиях 100% предоплаты, не позднее даты начала оказания услуг (п. 4.5.1 Договора). Предоплата выполняется перечислением денежных средств на расчётный счёт исполнителя.</p>
+          <p>Копия квитанции об оплате или карт-чек высылается исполнителю на электронный адрес a.nutrisher@gmail.com или admin@anutrisher.com либо в мессенджер по номеру +375 (29) 182-67-50.</p>
+        </div>
+      </div>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Как оплатить через систему АИС «Расчёт» (ЕРИП)?</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p">
+          <p>Оплату можно произвести в любом банке: через интернет-банкинг, мобильный банкинг, инфокиоск, банкомат, кассу. Можно платить наличными, электронными деньгами и банковскими карточками.</p>
+          <ol class="num">
+            <li>Выберите пункт «Система "Расчёт" (ЕРИП)», затем «Интернет-магазины / сервисы», «A–Z Латинские домены», «A», «Anutrisher.com».</li>
+            <li>Введите номер заказа.</li>
+            <li>Введите сумму платежа, если она не указана.</li>
+            <li>Проверьте корректность информации.</li>
+            <li>Совершите платёж.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="acc">
+        <button type="button" class="acc-h" aria-expanded="false"><span>Есть ли возможность и сроки отмены заказа?</span><i class="pl" aria-hidden="true"></i></button>
+        <div class="acc-p"><ul class="lst">
+          <li>Свяжитесь с нами по контактным телефонам или электронной почте: контакты указаны на сайте и в п. 13.2 Договора.</li>
+          <li>Отправьте письменное заявление в свободной форме способом, указанным в п. 8.4 Договора.</li>
+          <li>Ответ будет предоставлен в течение 14 календарных дней.</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="h-c">
+  <div class="wrap">
+    <div class="final" data-rv>
+      <div class="aura a1" aria-hidden="true"></div><div class="aura a2" aria-hidden="true"></div>
+      <h2 id="h-c">Расскажите о вашем запросе</h2>
+      <div>
+        <p>Вопрос, проект, фотографии при наличии. Первая консультация бесплатно.</p>
+        <div class="cta">
+          <button type="button" class="btn btn-w" data-open-form>Заполнить форму</button>
+          <a class="btn btn-o" href="tel:+375291826750">Позвонить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <a class="mark" href="#top" style="color:var(--ink)"><i aria-hidden="true"></i>sherma.consult</a>
+      <p class="req">ИП Шереметов С.О., УНП 491533787<br>220065, Беларусь, г. Минск, ул. Л. Левина, д. 7, кв. 195<br>Свидетельство о государственной регистрации № 491533787 выдано Минским горисполкомом 25 октября 2024 года</p>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <a class="ftel" href="tel:+375291826750">+375 (29) 182-67-50</a>
+      <a href="mailto:admin@anutrisher.com">admin@anutrisher.com</a>
+      <a href="https://www.instagram.com/sherma.consult" target="_blank" rel="noopener">Instagram @sherma.consult</a>
+    </div>
+    <div>
+      <h4>Документы</h4>
+      <a href="https://anutrisher.com/gallery/%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D0%B9%20%D0%9E%D0%A4%D0%95%D0%A0%D0%A2%D0%AB.pdf">Публичный договор оферты (PDF)</a>
+      <a href="https://anutrisher.com/gallery/%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf">Политика конфиденциальности (PDF)</a>
+    </div>
+    <div class="pay"><img src="https://anutrisher.com/gallery_gen/896a2a184ca1420e526af9a9ba17a2ef_1978x100_fit.png" alt="Логотипы платёжных систем и банков" loading="lazy" onerror="this.closest('.pay').style.display='none'"></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <button type="button" class="btn btn-a" data-open-form>Заполнить форму</button>
+  <a class="btn btn-g" href="tel:+375291826750">Позвонить</a>
+</div>
+
+<dialog class="book" id="book" aria-labelledby="book-t">
+  <div class="book-in">
+    <div class="book-head">
+      <h3 id="book-t">Форма регистрации</h3>
+      <button type="button" class="x" data-close-form aria-label="Закрыть форму">&times;</button>
+    </div>
+    <form id="book-form" novalidate>
+      <p class="lead-f">Заполните, пожалуйста, форму регистрации, и я с вами свяжусь по телефону или через мессенджер (Telegram, Viber, WhatsApp), чтобы согласовать точное время и дату. Отвечаю не сразу, но все записи сохранены, они не теряются.</p>
+      <div class="two">
+        <label class="fld"><span>Фамилия *</span><input name="surname" autocomplete="family-name" data-req><span class="err">Укажите фамилию</span></label>
+        <label class="fld"><span>Имя Отчество *</span><input name="name" autocomplete="given-name" data-req><span class="err">Укажите имя и отчество</span></label>
+      </div>
+      <div class="two">
+        <label class="fld"><span>Эл. почта *</span><input name="email" type="email" autocomplete="email" data-req><span class="err">Нужен адрес вида name@mail.com</span></label>
+        <label class="fld"><span>Телефон с кодом страны *</span><input name="phone" type="tel" autocomplete="tel" placeholder="+375 29 000-00-00" data-req><span class="err">Нужен номер, минимум 9 цифр</span></label>
+      </div>
+      <label class="fld"><span>Место расположения объекта *</span><input name="place" data-req><span class="err">Укажите город или адрес объекта</span></label>
+      <fieldset class="svc">
+        <legend>Вид услуги *</legend>
+        <div class="chips">
+          <label><input type="radio" name="svc" value="Приёмка квартиры" checked><span>Приёмка квартиры</span></label>
+          <label><input type="radio" name="svc" value="Консультация"><span>Консультация</span></label>
+        </div>
+      </fieldset>
+      <label class="fld" id="q-wrap" hidden><span>Ваш запрос (при консультации)</span>
+        <select name="query">
+          <option value="">выбрать пункт</option>
+          <option>Вы хотите выполнить ремонт: с чего начать, что делать на текущем этапе</option>
+          <option>Сомнение в правильности проектного решения</option>
+          <option>Прораб не может разобраться</option>
+          <option>Возникло ощущение, что подрядчик «косячит» (проектировщик или производитель работ)</option>
+          <option>В здании возникли проблемы (необходимо решение)</option>
+          <option>Вы хотите строить дом или пристройку: с чего начать, что делать на текущем этапе</option>
+          <option>Любые технические вопросы по ремонту и строительству</option>
+        </select>
+      </label>
+      <label class="agree fld"><input type="checkbox" name="agree" data-req><span>Я согласен с <a href="https://anutrisher.com/gallery/%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8.pdf">политикой конфиденциальности</a> *</span><span class="err">Нужно согласие</span></label>
+      <button class="btn btn-a" type="submit">Отправить форму</button>
+      <p class="fine">В концепте форма никуда не отправляет данные.</p>
+    </form>
+    <div class="done" id="book-done" hidden>
+      <div class="ok"><svg viewBox="0 0 36 36" aria-hidden="true"><path pathLength="1" d="M8 18.5l6.5 6.5L28 11.5" fill="none" stroke="var(--accent)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Форма отправлена</h3>
+      <p>Свяжусь с вами по телефону или в мессенджере, чтобы согласовать время и дату.</p>
+      <button type="button" class="btn btn-g" data-close-form>Закрыть</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* form */
+  var d=document.getElementById('book'),f=document.getElementById('book-form'),done=document.getElementById('book-done'),qw=document.getElementById('q-wrap');
+  document.querySelectorAll('[data-open-form]').forEach(function(b){b.addEventListener('click',function(){f.hidden=false;done.hidden=true;d.showModal()})});
+  document.querySelectorAll('[data-close-form]').forEach(function(b){b.addEventListener('click',function(){d.close()})});
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+  function valid(el){var v=el.value.trim();return el.type==='checkbox'?el.checked:el.type==='email'?/^\S+@\S+\.\S+$/.test(v):el.type==='tel'?v.replace(/\D/g,'').length>=9:v.length>=2}
+  f.querySelectorAll('[data-req]').forEach(function(i){
+    i.addEventListener('input',function(){i.closest('.fld').classList.remove('bad')});
+    i.addEventListener('blur',function(){if(i.value&&!valid(i))i.closest('.fld').classList.add('bad')})});
+  f.querySelectorAll('input[name=svc]').forEach(function(r){r.addEventListener('change',function(){qw.hidden=!(r.checked&&r.value==='Консультация')})});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();var first=null;
+    f.querySelectorAll('[data-req]').forEach(function(el){var ok=valid(el);el.closest('.fld').classList.toggle('bad',!ok);if(!ok&&!first)first=el});
+    if(first){first.focus();return}
+    f.hidden=true;done.hidden=false;f.reset();qw.hidden=true;
+  });
+
+  /* accordion */
+  document.querySelectorAll('.acc-h').forEach(function(b){b.addEventListener('click',function(){var o=b.parentNode.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+
+  /* headline words */
+  var h1=document.getElementById('h1');
+  h1.innerHTML=h1.textContent.split(' ').map(function(w,i){return '<span class="w" style="--i:'+i+'">'+w+'</span>'}).join(' ');
+
+  /* marquee */
+  var items=['Приёмка квартир','Консультация','Индивидуальное сопровождение','Планирование','Реализация и контроль','Завершение'],m='';
+  for(var k=0;k<4;k++)items.forEach(function(t){m+='<span>'+t+'</span><i></i>'});
+  document.getElementById('marq').innerHTML=m;
+
+  /* reveal + counters */
+  function count(el){var to=+el.dataset.count,t0=null;if(RM){el.textContent=to;return}
+    (function st(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)})(performance.now())}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting)return;x.target.classList.add('in');io.unobserve(x.target)})},{threshold:.15});
+  document.querySelectorAll('[data-rv]').forEach(function(el){io.observe(el)});
+  setTimeout(function(){document.querySelectorAll('[data-count]').forEach(count)},500);
+
+  /* spotlight on cards */
+  if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.spot').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px')})});
+
+  /* scroll: progress, header, motto */
+  var prog=document.getElementById('prog'),top=document.getElementById('top'),words=[];
+  document.querySelectorAll('[data-words]').forEach(function(p){p.innerHTML=p.textContent.split(' ').map(function(w){return '<span>'+w+'</span>'}).join(' ');words=[].slice.call(p.querySelectorAll('span'))});
+  var motto=document.querySelector('.motto');
+  function onScroll(){
+    var max=document.documentElement.scrollHeight-innerHeight;prog.style.transform='scaleX('+(max>0?scrollY/max:0)+')';
+    top.classList.toggle('stuck',scrollY>8);
+    var r=motto.getBoundingClientRect(),vh=innerHeight,p=Math.max(0,Math.min(1,(vh*.8-r.top)/(r.height*.7+vh*.2))),n=Math.round(p*words.length);
+    words.forEach(function(w,i){w.classList.toggle('on',RM||i<n)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* 3D model */
+  var cv=document.getElementById('model');
+  try{
+    var R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+    R.setPixelRatio(Math.min(devicePixelRatio||1,2));
+    var scene=new THREE.Scene(),cam=new THREE.OrthographicCamera(-1,1,1,-1,1,4000);
+    cam.position.set(560,520,560);cam.lookAt(0,20,0);
+    scene.add(new THREE.AmbientLight(0xffffff,.8));
+    var sun=new THREE.DirectionalLight(0xffffff,.5);sun.position.set(-300,600,200);scene.add(sun);
+    var G=new THREE.Group();scene.add(G);
+    var CX=190,CY=165,H=64;
+    var mWall=new THREE.MeshLambertMaterial({color:0xffffff}),mFloor=new THREE.MeshLambertMaterial({color:0xCDD2FF}),mFurn=new THREE.MeshLambertMaterial({color:0x3D4EF5}),mWarm=new THREE.MeshLambertMaterial({color:0xFF9B6A}),mPin=new THREE.MeshBasicMaterial({color:0xFF7A3D}),
+        mBeam=new THREE.MeshBasicMaterial({color:0x3D4EF5,transparent:true,opacity:.16,side:THREE.DoubleSide,depthWrite:false});
+    function shape(p){var s=new THREE.Shape();p.forEach(function(q,i){var x=q[0]-CX,y=-(q[1]-CY);i?s.lineTo(x,y):s.moveTo(x,y)});return s}
+    function slab(p){var g=new THREE.ExtrudeGeometry(shape(p),{depth:10,bevelEnabled:false});g.rotateX(-Math.PI/2);var m=new THREE.Mesh(g,mFloor);m.position.y=-10;G.add(m)}
+    slab([[0,0],[380,0],[380,170],[230,170],[230,300],[0,300]]);slab([[0,300],[120,300],[120,342],[0,342]]);
+    var grow=[];
+    function put(geo,mat,x,z,h){var m=new THREE.Mesh(geo,mat);m.position.set(x,h/2,z);m.userData.h=h;G.add(m);grow.push(m);return m}
+    function wall(a,b,c,dd,th,h){var dx=c-a,dz=dd-b,L=Math.hypot(dx,dz),m=put(new THREE.BoxGeometry(L+th,h,th),mWall,(a+c)/2-CX,(b+dd)/2-CY,h);m.rotation.y=-Math.atan2(dz,dx)}
+    [[0,0,380,0],[380,0,380,170],[380,170,230,170],[230,170,230,212],[230,256,230,300],[230,300,0,300],[0,300,0,0]].forEach(function(s){wall(s[0],s[1],s[2],s[3],8,H)});
+    [[240,0,240,108],[240,148,240,170],[110,0,110,38],[110,76,110,105],[0,105,110,105]].forEach(function(s){wall(s[0],s[1],s[2],s[3],4,H)});
+    [[0,342,120,342],[0,300,0,342],[120,300,120,342]].forEach(function(s){wall(s[0],s[1],s[2],s[3],4,24)});
+    function box(x1,z1,x2,z2,h,mat){put(new THREE.BoxGeometry(x2-x1,h,z2-z1),mat||mFurn,(x1+x2)/2-CX,(z1+z2)/2-CY,h)}
+    box(290,18,368,118,16);box(296,22,362,46,22,mWarm);box(18,252,122,288,18,mWarm);box(18,280,122,290,34,mWarm);box(122,8,228,32,30);box(132,92,204,120,30);box(12,12,46,92,18);
+    put(new THREE.CylinderGeometry(24,24,26,28),mWarm,160-CX,222-CY,26);
+    var beam=new THREE.Mesh(new THREE.PlaneGeometry(420,390),mBeam);beam.rotation.x=-Math.PI/2;G.add(beam);
+    var pins=[[170,160],[330,145],[60,214],[205,278]].map(function(p,i){var g=new THREE.Group(),r=new THREE.Mesh(new THREE.TorusGeometry(13,1.8,8,36),mPin);r.rotation.x=Math.PI/2;
+      g.add(new THREE.Mesh(new THREE.SphereGeometry(6,18,12),mPin));g.add(r);g.position.set(p[0]-CX,10,p[1]-CY);g.userData={r:r,i:i};g.scale.setScalar(.001);G.add(g);return g});
+    function size(){var w=cv.clientWidth,h=cv.clientHeight;R.setSize(w,h,false);var v=215,a=w/h;cam.left=-v*a;cam.right=v*a;cam.top=v;cam.bottom=-v;cam.updateProjectionMatrix()}
+    size();addEventListener('resize',size);
+    var tS=0,stage=0,ws=.02,ps=0,rot=-.5,vel=0,drag=false,lx=0,vis=true,t0=performance.now(),auto=true;
+    var btns=document.querySelectorAll('[data-stage]');
+    function setStage(n){stage=n;if(n===2)tS=performance.now();btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.stage==n)})}
+    btns.forEach(function(b){b.addEventListener('click',function(){auto=false;setStage(+b.dataset.stage)})});
+    if(RM){setStage(2);ws=1;ps=1}else{setTimeout(function(){auto&&setStage(1)},1500);setTimeout(function(){auto&&setStage(2)},3300)}
+    cv.addEventListener('pointerdown',function(e){drag=true;lx=e.clientX;cv.setPointerCapture(e.pointerId)});
+    cv.addEventListener('pointermove',function(e){if(!drag)return;vel=(e.clientX-lx)*.008;rot+=vel;lx=e.clientX});
+    ['pointerup','pointercancel'].forEach(function(n){cv.addEventListener(n,function(){drag=false})});
+    new IntersectionObserver(function(en){vis=en[0].isIntersecting}).observe(cv);
+    (function frame(now){
+      requestAnimationFrame(frame);if(!vis)return;
+      var t=(now-t0)/1000,k=RM?1:.08;
+      ws+=((stage>0?1:.02)-ws)*k;ps+=((stage>1?1:0)-ps)*k;
+      grow.forEach(function(m){m.scale.y=ws;m.position.y=m.userData.h*ws/2});
+      var ph=RM?1:((now-tS)/3200)%1.6;beam.visible=stage>1&&ph<1;beam.position.y=4+ph*(H+6);mBeam.opacity=.18*(1-ph*ph);
+      pins.forEach(function(g){g.scale.setScalar(Math.max(.001,ps));var q=RM?1:1+.25*Math.sin(t*2.6+g.userData.i);g.userData.r.scale.set(q,q,q)});
+      if(!drag){if(!RM)rot+=.0018;rot+=vel;vel*=.92}
+      G.rotation.y=rot;R.render(scene,cam);
+    })(performance.now());
+  }catch(e){cv.style.display='none'}
+})();
+</script>
+</body>
+</html>
